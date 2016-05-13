@@ -26,14 +26,14 @@ public class FunctionObjectDemo {
 
     private static List<PhoneNumber> createDirectory() {
 
-        PhoneNumber johns = new PhoneNumber("012-1111");
-        PhoneNumber jacks = new PhoneNumber("011-1112");
-        PhoneNumber kates = new PhoneNumber("012-1111");
-        PhoneNumber kathys = new PhoneNumber("010-3333");
-        PhoneNumber madelines = new PhoneNumber("030-1111");
-        PhoneNumber gussies = new PhoneNumber("030-1111");
-        PhoneNumber stiffys = new PhoneNumber("030-1222");
-        PhoneNumber berties = new PhoneNumber("010-9999");
-        return Arrays.asList(johns,jacks,kates, kathys, madelines, gussies, stiffys, berties);
+        PhoneNumber john = new PhoneNumber("012-1111");
+        PhoneNumber jack = new PhoneNumber("011-1112");
+        PhoneNumber kate = new PhoneNumber("012-1111");
+        PhoneNumber kathy = new PhoneNumber("010-3333");
+        PhoneNumber madeline = new PhoneNumber("030-1111");
+        PhoneNumber gussie = new PhoneNumber("030-1111");
+        PhoneNumber stiffy = new PhoneNumber("030-1222");
+        PhoneNumber bertie = new PhoneNumber("010-9999");
+        return Arrays.asList(john,jack,kate, kathy, madeline, gussie, stiffy, bertie);
     }
 }

@@ -7,6 +7,10 @@ class City {
     private final int zipCode;
     private static final Map<Integer,City> cache = new HashMap<>();
 
+    public int getZipCode() {
+        return zipCode;
+    }
+
     public static City city(String name, int zipCode){
         //To demonstrate usage of Optional
         return Optional.of(cache.get(zipCode)).orElse(newCity(name, zipCode));
@@ -18,7 +22,7 @@ class City {
         return city;
     }
 
-    private City(String name, int zipCode) {
+    protected City(String name, int zipCode) {
         this.name = name;
         this.zipCode = zipCode;
     }

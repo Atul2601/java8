@@ -4,16 +4,17 @@ import java.util.stream.LongStream;
 
 public class StreamDemo {
     public static void main(String[] args) {
+        //Making streams parallel may not always improve performance.
         primeNumberStream();
 
 //        parallelPrimeNumberStream();
 
 
+
     }
 
     private static void parallelPrimeNumberStream() {
-        long start;
-        start = System.currentTimeMillis();
+        long start = System.currentTimeMillis();
         LongStream.range(1, 1000000000000000000L)
                 .parallel()
                 .filter(n-> n%2!=0)
@@ -21,7 +22,6 @@ public class StreamDemo {
                 .filter(n->n%10L==3)
                 .toString();
 
-        System.out.println("cores: "+Runtime.getRuntime().availableProcessors());
         System.out.println(System.currentTimeMillis()-start+"*****");
     }
 
@@ -32,7 +32,6 @@ public class StreamDemo {
                 .filter(n-> LongStream.range(3, n/2).noneMatch(i-> n%i==0))
                 .filter(n->n%10L==3)
                 .toString();
-        System.out.println("cores: "+Runtime.getRuntime().availableProcessors());
         System.out.println(System.currentTimeMillis()-start+"*****");
     }
 }
